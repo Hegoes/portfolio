@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumongal Bijoy Neog — Software Engineer</title>
+  <meta name="description" content="Portfolio of Sumongal Bijoy Neog, Software Engineer specializing in AI, ML, and Full-Stack Development." />
+
+  <!-- Google Fonts: Syne (display) + JetBrains Mono (code/body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ============================================================
+       NOISE OVERLAY — subtle grain texture on every section
+  ============================================================ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <!-- Terminal-style logo -->
+      <span class="nav__logo-bracket">&lt;</span>
+      <span class="nav__logo-name">SBN</span>
+      <span class="nav__logo-bracket">/&gt;</span>
+    </div>
+
+    <!-- Desktop nav links -->
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about"      class="nav__link" data-section="about">About</a></li>
+      <li><a href="#experience" class="nav__link" data-section="experience">Experience</a></li>
+      <li><a href="#skills"     class="nav__link" data-section="skills">Skills</a></li>
+      <li><a href="#projects"   class="nav__link" data-section="projects">Projects</a></li>
+      <li><a href="#positions"  class="nav__link" data-section="positions">Positions</a></li>
+      <li><a href="#leadership" class="nav__link" data-section="leadership">Leadership</a></li>
+      <li><a href="#contact"    class="nav__link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger (mobile) -->
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about"      class="mobile-menu__link">About</a></li>
+      <li><a href="#experience" class="mobile-menu__link">Experience</a></li>
+      <li><a href="#skills"     class="mobile-menu__link">Skills</a></li>
+      <li><a href="#projects"   class="mobile-menu__link">Projects</a></li>
+      <li><a href="#positions"  class="mobile-menu__link">Positions</a></li>
+      <li><a href="#leadership" class="mobile-menu__link">Leadership</a></li>
+      <li><a href="#contact"    class="mobile-menu__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1: HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+
+    <!-- Animated grid background -->
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <!-- Floating orbs (decorative) -->
+    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
+    <!-- Scanline effect -->
+    <div class="hero__scanline" aria-hidden="true"></div>
+
+    <div class="hero__content">
+
+      <!-- Status badge — terminal ping style -->
+      <div class="hero__badge" data-animate="fade-up" data-delay="0">
+        <span class="hero__badge-dot"></span>
+        <span class="hero__badge-text">Available for opportunities</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="hero__headline" data-animate="fade-up" data-delay="1">
+        <span class="hero__greeting">Hello, I'm</span>
+        <span class="hero__name glitch" data-text="Sumongal">Sumongal</span>
+        <span class="hero__surname">Bijoy Neog</span>
+      </h1>
+
+      <!-- Animated role text -->
+      <div class="hero__role" data-animate="fade-up" data-delay="2">
+        <span class="hero__role-prefix">// </span>
+        <span class="hero__role-text" id="roleText"></span>
+        <span class="hero__role-cursor">_</span>
+      </div>
+
+      <!-- Sub-description -->
+      <p class="hero__desc" data-animate="fade-up" data-delay="3">
+        B.Tech CS student at SRMIST · Building intelligent systems at the intersection of
+        <em>AI, backend engineering,</em> and <em>web development</em>.
+        Turning complex problems into elegant, scalable solutions.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero__cta" data-animate="fade-up" data-delay="4">
+        <a href="#projects" class="btn btn--primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <span>Get in Touch</span>
+        </a>
+        <a href="mailto:sumongalbijoyneog@gmail.com" class="btn btn--icon" aria-label="Email">
+          <!-- Download CV icon — placeholder  -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Social links row -->
+      <div class="hero__socials" data-animate="fade-up" data-delay="5">
+        <a href="https://www.linkedin.com/in/sumongalbijoyneog/" target="_blank" rel="noopener" class="hero__social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/Hegoes" target="_blank" rel="noopener" class="hero__social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="tel:+918135919700" class="hero__social-link" aria-label="Phone">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.26 9.11 19.79 19.79 0 01.22 .5a2 2 0 012-.22l3 .01a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero right: terminal card -->
+    <div class="hero__terminal" data-animate="fade-left" data-delay="2">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--yellow"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+          <span class="terminal__title">sumongal@portfolio ~ </span>
+        </div>
+        <div class="terminal__body" id="terminalBody">
+          <!-- Lines injected by JS -->
+        </div>
+      </div>
+
+      <!-- Stats below terminal -->
+      <!-- <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">8.52</span>
+          <span class="hero__stat-label">CGPA</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">2+</span>
+          <span class="hero__stat-label">Projects</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">1</span>
+          <span class="hero__stat-label">Internship</span>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- Scroll cue -->
+    <div class="hero__scroll-cue" aria-label="Scroll down">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2: ABOUT
+  ============================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+
+      <!-- Section label -->
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">01</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">About Me</span>
+      </div>
+
+      <div class="about__grid">
+
+        <!-- Left: big quote + bio -->
+        <div class="about__left" data-animate="fade-right">
+          <h2 class="about__heading">
+            Engineering <em>ideas</em> into<br/>
+            intelligent systems
+          </h2>
+          <p class="about__bio">
+            I'm a <strong>Computer Science undergraduate</strong> at SRM Institute of Science and Technology (2023–present). My focus lies in building practical, AI-driven software — from 
+            semantic search pipelines to REST APIs — with clean, maintainable code at the core.
+          </p>
+          <p class="about__bio">
+            Beyond code, I lead visual communication as <strong>Head of Graphics at TEDx SRMIST</strong>and love experimenting 
+            with <strong>content</strong> and <strong>creative storytelling.</strong> 
+          </p>
+
+          <!-- Quick info pills -->
+          <div class="about__pills">
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg>Assam, India</span>
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 10v6M2 10l10-8 10 8M6 10v8a2 2 0 002 2h8a2 2 0 002-2v-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>SRMIST, Delhi-NCR</span>
+            <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>B.Tech CS (2023–2027)</span>
+          </div>
+        </div>
+
+        <!-- Right: decorative code card + traits -->
+        <div class="about__right" data-animate="fade-left">
+          <div class="about__code-card">
+            <div class="about__code-header">
+              <span class="about__code-dot"></span>
+              <span class="about__code-dot"></span>
+              <span class="about__code-dot"></span>
+              <span class="about__code-file">profile.json</span>
+            </div>
+            <pre class="about__code"><code><span class="c-bracket">{</span>
+  <span class="c-key">"name"</span><span class="c-colon">:</span> <span class="c-str">"Sumongal Bijoy Neog"</span>,
+  <span class="c-key">"location"</span><span class="c-colon">:</span> <span class="c-str">"Assam, India"</span>,
+  <span class="c-key">"university"</span><span class="c-colon">:</span> <span class="c-str">"SRMIST"</span>,
+  <span class="c-key">"focus"</span><span class="c-colon">:</span> <span class="c-bracket">[</span>
+    <span class="c-str">"AI / ML"</span>,
+    <span class="c-str">"Backend Engineering"</span>,
+    <span class="c-str">"Web Dev"</span>
+  <span class="c-bracket">]</span>,
+  <span class="c-key">"softSkills"</span><span class="c-colon">:</span> <span class="c-bracket">[</span>
+    <span class="c-str">"Persistent"</span>,
+    <span class="c-str">"Strong Work Ethics"</span>,
+    <span class="c-str">"Time Management"</span>,
+    <span class="c-str">"Adaptability"</span>
+  <span class="c-bracket">]</span>,
+  <span class="c-key">"openToWork"</span><span class="c-colon">:</span> <span class="c-bool">true</span>
+<span class="c-bracket">}</span></code></pre>
+          </div>
+
+          <!-- Trait bars -->
+          <div class="about__traits">
+            <div class="trait" data-animate="bar" data-width="92">
+              <div class="trait__header"><span>Problem Solving</span><span>92%</span></div>
+              <div class="trait__bar"><div class="trait__fill"></div></div>
+            </div>
+            <div class="trait" data-animate="bar" data-width="85">
+              <div class="trait__header"><span>Backend Engineering</span><span>85%</span></div>
+              <div class="trait__bar"><div class="trait__fill"></div></div>
+            </div>
+            <div class="trait" data-animate="bar" data-width="80">
+              <div class="trait__header"><span>AI / ML Integration</span><span>80%</span></div>
+              <div class="trait__bar"><div class="trait__fill"></div></div>
+            </div>
+            <div class="trait" data-animate="bar" data-width="75">
+              <div class="trait__header"><span>Frontend Development</span><span>75%</span></div>
+              <div class="trait__bar"><div class="trait__fill"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.about__grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3: EXPERIENCE
+  ============================================================ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">02</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">Experience</span>
+      </div>
+
+      <h2 class="section-heading" data-animate="fade-up">Where I've worked</h2>
+
+      <!-- Timeline -->
+      <div class="timeline">
+
+        <!-- Experience item 1 -->
+        <div class="timeline__item" data-animate="fade-up">
+          <div class="timeline__marker">
+            <div class="timeline__dot"></div>
+            <div class="timeline__line"></div>
+          </div>
+
+          <div class="timeline__card">
+            <div class="timeline__card-top">
+              <div>
+                <span class="timeline__tag">Internship</span>
+                <h3 class="timeline__role">AI &amp; Enterprise Systems Intern</h3>
+                <span class="timeline__company">NTPC Limited — IT Division</span>
+              </div>
+              <span class="timeline__date">Dec 2025 – Jan 2026</span>
+            </div>
+
+            <ul class="timeline__bullets">
+              <li>Led development of an <strong>AI-based semantic document search system</strong> enabling context-aware retrieval from enterprise PDF documents.</li>
+              <li>Designed a scalable pipeline covering PDF text extraction, <strong>OCR handling</strong>, intelligent chunking, and <strong>vector similarity search</strong>.</li>
+              <li>Improved accuracy and relevance of enterprise information retrieval using <strong>Hugging Face Sentence Transformers</strong> and Oracle Database (VECTOR).</li>
+            </ul>
+
+            <!-- Tech stack pills -->
+            <div class="timeline__tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Hugging Face</span>
+              <span class="tech-pill">Sentence Transformers</span>
+              <span class="tech-pill">Oracle DB (VECTOR)</span>
+              <span class="tech-pill">Oracle APEX</span>
+              <span class="tech-pill">ORDS</span>
+              <span class="tech-pill">pdfplumber</span>
+              <span class="tech-pill">pytesseract</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">SQL</span>
+            </div>
+          </div>
+        </div><!-- /.timeline__item -->
+
+        <!-- Education (shown in timeline) -->
+        <div class="timeline__item" data-animate="fade-up">
+          <div class="timeline__marker">
+            <div class="timeline__dot timeline__dot--edu"></div>
+          </div>
+
+          <div class="timeline__card timeline__card--edu">
+            <div class="timeline__card-top">
+              <div>
+                <span class="timeline__tag timeline__tag--edu">Education</span>
+                <h3 class="timeline__role">Bachelor of Computer Science</h3>
+                <span class="timeline__company">SRM Institute of Science and Technology</span>
+              </div>
+              <span class="timeline__date">2023 – present</span>
+            </div>
+
+            <p class="timeline__courses-label">Relevant Coursework:</p>
+            <div class="timeline__tech">
+              <span class="tech-pill">DSA</span>
+              <span class="tech-pill">OOPs</span>
+              <span class="tech-pill">Automata Theory</span>
+              <span class="tech-pill">Discrete Maths</span>
+              <span class="tech-pill">Computer Networks</span>
+              <span class="tech-pill">OS</span>
+              <span class="tech-pill">Databases</span>
+              <span class="tech-pill">AI</span>
+              <span class="tech-pill">ML</span>
+              <span class="tech-pill">Data Science</span>
+              <span class="tech-pill">Compiler Design</span>
+              <span class="tech-pill">Data Mining</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.timeline -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4: SKILLS
+  ============================================================ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">03</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">Skills</span>
+      </div>
+
+      <h2 class="section-heading" data-animate="fade-up">My tech arsenal</h2>
+
+      <div class="skills__grid">
+
+        <!-- Category: Languages -->
+        <div class="skill-card" data-animate="fade-up" data-delay="0">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="skill-card__title">Languages</h3>
+          <div class="skill-card__items">
+            <div class="skill-item">
+              <span class="skill-item__name">C++</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">Python</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">JavaScript</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">HTML / CSS</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: AI / ML -->
+        <div class="skill-card" data-animate="fade-up" data-delay="1">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a5 5 0 015 5v1a5 5 0 01-5 5 5 5 0 01-5-5V7a5 5 0 015-5z" stroke="currentColor" stroke-width="1.5"/><path d="M2 21a10 10 0 0120 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M7 10l-3 5M17 10l3 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="skill-card__title">AI / ML</h3>
+          <div class="skill-card__items">
+            <div class="skill-item">
+              <span class="skill-item__name">Hugging Face</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">scikit-learn</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">NLP / Embeddings</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">Vector Search</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Backend / APIs -->
+        <div class="skill-card" data-animate="fade-up" data-delay="2">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="10" width="20" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="17" width="20" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><circle cx="6" cy="5" r="0.8" fill="currentColor"/><circle cx="6" cy="12" r="0.8" fill="currentColor"/><circle cx="6" cy="19" r="0.8" fill="currentColor"/></svg>
+          </div>
+          <h3 class="skill-card__title">Backend &amp; APIs</h3>
+          <div class="skill-card__items">
+            <div class="skill-item">
+              <span class="skill-item__name">FastAPI</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">REST APIs</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">Oracle DB</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">SQL</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Tools -->
+        <div class="skill-card" data-animate="fade-up" data-delay="3">
+          <div class="skill-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="skill-card__title">Tools &amp; Platforms</h3>
+          <div class="skill-card__items">
+            <div class="skill-item">
+              <span class="skill-item__name">Git / GitHub</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">VS Code</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">Swagger UI</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-item__name">Canva</span>
+              <div class="skill-item__dots">
+                <span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--fill"></span><span class="dot dot--empty"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.skills__grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 5: PROJECTS
+  ============================================================ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">04</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">Projects</span>
+      </div>
+
+      <h2 class="section-heading" data-animate="fade-up">Things I've built</h2>
+
+      <div class="projects__grid">
+
+        <!-- Project 1: Smart Resume Job Matching -->
+        <article class="project-card" data-animate="fade-up" data-delay="0">
+          <div class="project-card__header">
+            <div class="project-card__num">01</div>
+            <div class="project-card__links">
+              <a href="https://github.com/Hegoes" target="_blank" rel="noopener" class="project-card__link" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">Smart Resume Job Matching System</h3>
+            <p class="project-card__desc">
+              NLP-powered backend that parses resume PDFs and computes job compatibility using TF-IDF and cosine similarity. 
+              Exposes real-time matching via REST APIs with Swagger UI documentation.
+            </p>
+          </div>
+
+          <div class="project-card__footer">
+            <div class="project-card__tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">FastAPI</span>
+              <span class="tech-pill">scikit-learn</span>
+              <span class="tech-pill">pdfplumber</span>
+              <span class="tech-pill">REST API</span>
+            </div>
+            <a href="https://github.com/Hegoes" target="_blank" rel="noopener" class="project-card__cta">
+              <span>View Project</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Decorative corner accent -->
+          <div class="project-card__accent" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 2: Space Facts Blog -->
+        <article class="project-card" data-animate="fade-up" data-delay="1">
+          <div class="project-card__header">
+            <div class="project-card__num">02</div>
+            <div class="project-card__links">
+              <a href="https://github.com/Hegoes" target="_blank" rel="noopener" class="project-card__link" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">Space Facts Blog</h3>
+            <p class="project-card__desc">
+              A responsive, educational blog showcasing curated space content with an interactive UI. 
+              Built with semantic HTML, modern CSS animations, and vanilla JavaScript for a smooth reading experience.
+            </p>
+          </div>
+
+          <div class="project-card__footer">
+            <div class="project-card__tech">
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Responsive</span>
+            </div>
+            <a href="https://github.com/Hegoes" target="_blank" rel="noopener" class="project-card__cta">
+              <span>View Project</span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <div class="project-card__accent" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 3: AI Semantic Search (NTPC) — featured -->
+        <article class="project-card project-card--featured" data-animate="fade-up" data-delay="2">
+          <div class="project-card__header">
+            <div class="project-card__num">03</div>
+            <span class="project-card__featured-badge">Featured ✦</span>
+          </div>
+
+          <div class="project-card__body">
+            <h3 class="project-card__title">AI Semantic Document Search</h3>
+            <p class="project-card__desc">
+              Enterprise-grade AI search system built during internship at NTPC Limited. 
+              Leverages Sentence Transformers for semantic embeddings and Oracle's VECTOR database for similarity retrieval, 
+              with OCR support for scanned documents — enabling intelligent, context-aware search across large PDF corpora.
+            </p>
+          </div>
+
+          <div class="project-card__footer">
+            <div class="project-card__tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Sentence Transformers</span>
+              <span class="tech-pill">Oracle VECTOR DB</span>
+              <span class="tech-pill">pdfplumber</span>
+              <span class="tech-pill">pytesseract</span>
+              <span class="tech-pill">Oracle APEX</span>
+            </div>
+            <span class="project-card__cta project-card__cta--disabled">
+              <span>Enterprise Project</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+
+          <div class="project-card__accent" aria-hidden="true"></div>
+        </article>
+
+      </div><!-- /.projects__grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 6: POSITIONS OF RESPONSIBILITY
+  ============================================================ -->
+  <section class="section positions" id="positions">
+    <div class="container">
+
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">05</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">Positions of Responsibility</span>
+      </div>
+
+      <h2 class="section-heading" data-animate="fade-up">Roles I've held</h2>
+
+      <div class="positions__grid">
+
+        <!-- TEDx: Head of Graphics -->
+        <div class="pos-card" data-animate="fade-up" data-delay="0">
+          <div class="pos-card__icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="pos-card__body">
+            <span class="pos-card__org">TEDx Club — SRMIST Delhi-NCR</span>
+            <h3 class="pos-card__role">Head of Graphics</h3>
+            <p class="pos-card__desc">
+              Managed all visual design requirements for the TEDx event — branding assets, posters, banners, 
+              speaker creatives, and digital content — ensuring a cohesive visual identity across social media platforms.
+            </p>
+          </div>
+          <div class="pos-card__tag">Design Lead</div>
+        </div>
+
+        <!-- TEDx: Marketing -->
+        <div class="pos-card" data-animate="fade-up" data-delay="1">
+          <div class="pos-card__icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="pos-card__body">
+            <span class="pos-card__org">TEDx Club — SRMIST Delhi-NCR</span>
+            <h3 class="pos-card__role">Marketing / Communications Team</h3>
+            <p class="pos-card__desc">
+              Supported marketing and communication efforts through promotional campaigns, content drafting, 
+              and coordinated outreach — improving event visibility and audience engagement.
+            </p>
+          </div>
+          <div class="pos-card__tag">Marketing</div>
+        </div>
+
+      </div><!-- /.positions__grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 7: LEADERSHIP
+  ============================================================ 
+  <section class="section leadership" id="leadership">
+    <div class="container">
+
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">06</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">Leadership</span>
+      </div>
+
+      <div class="leadership__inner" data-animate="fade-up">
+         Decorative large quote mark 
+        <div class="leadership__quote-mark" aria-hidden="true">"</div>
+
+        <div class="leadership__content">
+          <h2 class="leadership__heading">
+            Bridging technology &amp; social impact
+          </h2>
+
+          <div class="leadership__card">
+            <div class="leadership__card-accent"></div>
+            <div class="leadership__card-body">
+              <div class="leadership__org">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <strong>Gift a Smile Foundation — Volunteer &amp; Project Lead</strong>
+              </div>
+
+              <p class="leadership__desc">
+                Spearheaded a project to introduce technology to underprivileged students. 
+                Initiated a <strong>survey-based research phase</strong> to assess their current knowledge, 
+                then designed and delivered a foundational technology curriculum — directly impacting their 
+                access to digital literacy and broadening their career horizons.
+              </p>
+
+              <div class="leadership__impact">
+                <div class="impact-stat">
+                  <span class="impact-stat__num">∞</span>
+                  <span class="impact-stat__label">Lives Impacted</span>
+                </div>
+                <div class="impact-stat">
+                  <span class="impact-stat__num">Tech</span>
+                  <span class="impact-stat__label">Education Drive</span>
+                </div>
+                <div class="impact-stat">
+                  <span class="impact-stat__num">NGO</span>
+                  <span class="impact-stat__label">Sector Initiative</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- ============================================================
+       SECTION 8: CONTACT
+  ============================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+
+      <div class="section-label" data-animate="fade-up">
+        <span class="section-label__num">07</span>
+        <span class="section-label__line"></span>
+        <span class="section-label__text">Contact</span>
+      </div>
+
+      <div class="contact__inner">
+        <!-- Left: CTA text -->
+        <div class="contact__left" data-animate="fade-right">
+          <h2 class="contact__heading">
+            Let's build something
+            <span class="contact__heading-accent">extraordinary</span>
+          </h2>
+          <p class="contact__sub">
+            Open to internships, full-time roles, collaborations, and interesting projects. 
+            Drop a message — I respond fast.
+          </p>
+
+          <div class="contact__info-list">
+            <a href="mailto:sumongalbijoyneog@gmail.com" class="contact__info-item">
+              <span class="contact__info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <span>sumongalbijoyneog@gmail.com</span>
+            </a>
+            <a href="tel:+918135919700" class="contact__info-item">
+              <span class="contact__info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.26 9.11 19.79 19.79 0 01.22 .5a2 2 0 012-.22l3 .01a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.07 6.07l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span>+91 8135919700</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sumongalbijoyneog/" target="_blank" rel="noopener" class="contact__info-item">
+              <span class="contact__info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <span>linkedin.com/in/sumongalbijoyneog</span>
+            </a>
+            <a href="https://github.com/Hegoes" target="_blank" rel="noopener" class="contact__info-item">
+              <span class="contact__info-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </span>
+              <span>github.com/Hegoes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Contact form -->
+        <div class="contact__right" data-animate="fade-left">
+          <div class="contact-form-wrapper">
+            <div class="contact-form-wrapper__header">
+              <span class="contact-form-wrapper__label">// send_message.js</span>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Name *</label>
+                  <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email *</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input class="form-input" type="text" id="subject" name="subject" placeholder="What's this about?" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Message *</label>
+                <textarea class="form-input form-textarea" id="message" name="message" placeholder="Tell me about your project or opportunity..." required rows="5"></textarea>
+              </div>
+
+              <!-- Opportunity type tags -->
+              <div class="form-group">
+                <label class="form-label">I'm reaching out about:</label>
+                <div class="form-tags" id="formTags">
+                  <button type="button" class="form-tag" data-tag="internship">Internship</button>
+                  <button type="button" class="form-tag" data-tag="full-time">Full-time Role</button>
+                  <button type="button" class="form-tag" data-tag="collaboration">Collaboration</button>
+                  <button type="button" class="form-tag" data-tag="freelance">Freelance</button>
+                  <button type="button" class="form-tag" data-tag="other">Other</button>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                <span class="submit-text">Send Message</span>
+                <span class="submit-loading" style="display:none;">
+                  <svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-dasharray="31.4" stroke-dashoffset="10"/></svg>
+                  Sending...
+                </span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="submit-arrow"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+
+              <!-- Form feedback messages -->
+              <div class="form-success" id="formSuccess" style="display:none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5"/><polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span>Message sent! I'll get back to you shortly.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div><!-- /.contact__inner -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">
+            <span class="nav__logo-bracket">&lt;</span>SBN<span class="nav__logo-bracket">/&gt;</span>
+          </span>
+          <p class="footer__tagline">Building the future, one commit at a time.</p>
+        </div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/sumongalbijoyneog/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://github.com/Hegoes" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <a href="mailto:sumongalbijoyneog@gmail.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2025 Sumongal Bijoy Neog. All rights reserved.</span>
+        <span class="footer__made">Designed &amp; built with <span class="footer__heart">♥</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Progress indicator bar at top -->
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
